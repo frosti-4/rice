@@ -1,0 +1,9 @@
+* {
+    bg: #0f1511;
+    fg: #dfe4dd;
+    accent: #94d5a9;
+    select-bg: #374b3d;
+    select-fg: #d1e8d5;
+    border-col: #8a938b;
+}
+

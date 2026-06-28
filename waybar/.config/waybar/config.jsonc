@@ -1,0 +1,54 @@
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "passthrough": false,
+
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": ["custom/player","clock"],
+    "modules-right": ["pulseaudio", "battery", "temperature", "tray"],
+
+    "niri/workspaces": {
+        "format": "{index}",
+        "format-active": "󰮯"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "󰃭 {:%d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+	"custom/player": {
+	    "exec": "playerctl metadata --format '{{status}} {{artist}} - {{title}}' 2>/dev/null | sed -e 's/^Playing/󰏤/' -e 's/^Paused/󰐊/'",
+	    "interval": 2,
+	    "max-length": 40,
+	    "format": "{text}",
+	    "on-click": "playerctl play-pause",
+	    "on-click-right": "playerctl next"
+	},
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon}",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+    },
+    "temperature": {
+        "thermal-zone": 0, // Возможно, придется поменять на 0 или 1, зависит от датчика
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", // Путь к датчику
+        "critical-threshold": 80,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""] 
+   }
+
+}

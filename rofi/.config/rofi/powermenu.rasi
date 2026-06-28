@@ -1,0 +1,47 @@
+@import "colors.rasi"
+
+configuration {
+    show-icons: false;
+}
+
+window {
+    width: 320px;
+    border: 2px;
+    border-radius: 24px;
+    border-color: @accent; /* Цвет из твоего matugen */
+    background-color: @bg;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 20px;
+    children: [listview];
+}
+
+listview {
+    background-color: transparent;
+    lines: 5;
+    spacing: 8px;
+    scrollbar: false;
+    fixed-height: true;
+}
+
+element {
+    padding: 12px;
+    border-radius: 16px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
