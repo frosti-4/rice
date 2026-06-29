@@ -2,30 +2,30 @@
 
 THEME="$HOME/.config/rofi/powermenu.rasi"
 
-lock="󰌾 Заблокировать"
-suspend="󰤄 Сон"
-logout="󰍃 Выйти"
-reboot="󰜉 Перезагрузить"
-shutdown="󰐥 Выключить"
+shutdown="󰐥 Shutdown"
+reboot="󰜉 Reboot"
+lock="󰌾 Lock"
+suspend="󰤄 Sleep"
+logout="󰍃 Exit"
 
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
 chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power" -theme "$THEME")"
 
 case $chosen in
-    $lock)
-        swaylock --screenshots --clock --indicator --effect-blur 7x5 || loginctl lock-session
-        ;;
-    $suspend)
-        systemctl suspend
-        ;;
-    $logout)
-        niri msg action quit || loginctl terminate-user $USER
-        ;;
-    $reboot)
-        systemctl reboot
-        ;;
-    $shutdown)
-        systemctl poweroff
-        ;;
+$lock)
+  sh ~/dots/driftwm/.config/driftwm/lock.sh
+  ;;
+$suspend)
+  systemctl suspend
+  ;;
+$logout)
+  loginctl terminate-user $USER
+  ;;
+$reboot)
+  systemctl reboot
+  ;;
+$shutdown)
+  systemctl poweroff
+  ;;
 esac
