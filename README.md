@@ -29,7 +29,7 @@ git clone [https://github.com/frosti-4/dots.git](https://github.com/frosti-4/dot
 cd dots
 chmod +x install.sh
 ./install.sh
-
+```
 # Важное замечание
 
 Скрипт создания конфигурации использует симлинки. Чтобы настройки не сломались, не удаляйте и не перемещайте склонированную папку dots после завершения установки.
