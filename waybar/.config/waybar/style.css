@@ -1,28 +1,26 @@
 @import "colors.css";
 
 * {
-    font-family: "Inter Nerd Font", "Roboto", sans-serif;
+    font-family: "Inter Nerd Font", "Roboto", "sans-serif";
     font-size: 13px;
     font-weight: bold;
 }
 
 window#waybar {
-    background: transparent; /* Убирает черную подложку окна */
+    background: transparent;
 }
 
 window#waybar > box {
     background-color: @surface;
     border-radius: 999px;
     margin: 2px;
-/*    border: 1px solid @outline;*/
 }
 
-/* Группы модулей — делаем их "пилюлями" внутри бара */
 .modules-left, .modules-center, .modules-right {
-    background-color: @surface_variant; /* Фон чуть светлее */
+    background-color: @surface_variant;
     border-radius: 999px;
     padding: 2px 12px;
-    margin: 3px;               /* Чтобы они "плавали" внутри темного бара */
+    margin: 3px;
 }
 
 #workspaces button {
@@ -31,13 +29,12 @@ window#waybar > box {
 }
 
 #workspaces button.active {
-    background-color: @primary; /* Или @primary_container */
+    background-color: @primary;
     color: @on_primary;
     border-radius: 14px;
-    min-width: 15px;            /* Чтобы он был круглым, а не овальным */
+    min-width: 15px;
 }
 
-/* Плеер и другие модули */
 #custom-player, #clock, #pulseaudio, #battery, #temperature {
     padding:0 5px;
 }
@@ -47,22 +44,20 @@ window#waybar > box {
     margin: 3px;
 }
 
-/* Раздвигаем сами контейнеры иконок */
 #tray menu {
-    background-color: @surface; /* Исправляет фон контекстного меню трея */
+    background-color: @surface;
 }
 
 #tray > .passive,
 #tray > .active,
 #tray > .needs-attention {
-    margin: 0 8px; /* Расстояние между иконками */
+    margin: 0 8px;
 }
 
-/* Если это не помогло, используем самый глубокий селектор */
 #tray widget {
     margin: 0 6px;
 }
 
 #tray image {
-    margin: 0 2px; /* Дополнительный микро-отступ для самих картинок */
+    margin: 0 2px;
 }

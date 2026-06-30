@@ -1,0 +1,48 @@
+# Окно и прозрачность
+[window]
+opacity = 1.0
+padding = { x = 22, y = 22 } # Замена window_margin_width 21.75
+decorations = "full"
+
+# Шрифты
+[font]
+size = 11.0
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+style = "Regular"
+
+# Курсор
+[cursor]
+style = { shape = "Beam" }
+
+# Оболочка (Fish)
+[terminal.shell]
+program = "fish"
+
+
+
+# Цветовая схема Gruvbox Dark Soft
+[colors.primary]
+background = "#282828"
+foreground = "#fdf4c1"
+
+[colors.normal]
+black   = "#282828"
+red     = "#b22222"
+green   = "#98971a"
+yellow  = "#d79921"
+blue    = "#458588"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#a89984"
+
+[colors.bright]
+black   = "#928374"
+red     = "#800000"
+green   = "#b8bb26"
+yellow  = "#fabd2f"
+blue    = "#83a598"
+magenta = "#d3869b"
+cyan    = "#8ec07c"
+white   = "#fdf4c1"

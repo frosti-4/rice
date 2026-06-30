@@ -82,8 +82,8 @@ accel_profile = "flat"      # "flat" or "adaptive"
 natural_scroll = false      # reverse scroll direction
 
 [cursor]
-theme = "Adwaita"             # XCURSOR_THEME; "none" = inherit from environment (e.g. "Adwaita")
-size = 24                    # XCURSOR_SIZE; 0 = inherit from environment (e.g. 24)
+theme = "elementary"             # XCURSOR_THEME; "none" = inherit from environment (e.g. "Adwaita")
+size = 20                    # XCURSOR_SIZE; 0 = inherit from environment (e.g. 24)
 inactive_opacity = 0.5      # cursor opacity on non-active outputs (0.0–1.0)
 
 [navigation]
@@ -127,7 +127,7 @@ gap = 5.0                   # gap between snapped windows (canvas px)
 distance = 24.0              # activation threshold (screen px from edge)
 break_force = 32.0           # screen px past snap to break free
 corners = true              # also align corners (parallel edges line up: top-to-top, left-to-left)
-centers = false              # also align centers (midpoints line up along the moved axis)
+centers = true             # also align centers (midpoints line up along the moved axis)
 
 [decorations]
 # bg_color = "#303030"           # title bar background (default: dark gray)
@@ -271,7 +271,6 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+shift+m" = "fit-window-snapped"
 "mod+p" = "toggle-pin-to-screen"
 "mod+z" = "center-window"
-"mod+x" = "focus-center"
 "mod+a" = "home-toggle"
 
 "mod+up" = "center-nearest up"
@@ -324,7 +323,7 @@ type = "none"  # render no built-in background (path ignored), so a
 
 
 # CUSTOM Binds
-"mod+space" = "exec kitty"
+"mod+space" = "exec alacritty"
 "mod+w" = "exec firefox"
 "mod+e" = "exec nautilus"
 "mod+grave" = "exec rofi -show drun -theme ~/.config/rofi/rofi.rasi"
@@ -333,8 +332,9 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+shift+y" = "exec ~/.config/rofi/wallpaper-picker.sh"
 "mod+n" = "exec swaync-client -t"
 "mod+shift+n" = "exec obsidian --disable-gpu"
-"mod+c" = "exec kitty - e cmus"
-"ctrl+alt+delete" = "exec kitty -e btop"
+"mod+c" = "exec alacritty -e cmus"
+"ctrl+alt+delete" = "exec alacritty -e btop"
+"mod+x" = "exec flclash"
 
 # # Example: built-in window capture (isolated window + shadow) to clipboard
 # # "ctrl+Print" = "spawn driftwm msg screenshot window -o - | wl-copy"
@@ -574,6 +574,11 @@ resize_on_border = false
 # # and does NOT inherit from [decorations]. Without explicit values on the
 # # rule, a layer surface has no border, no shadow, and no corner clip.
 # #
+
+[[window_rules]]
+
+title = "FlClash"
+size = [600, 500]
 # # Example: Desktop widget (pinned clock/calendar)
 # # [[window_rules]]
 # # app_id     = "my-widget"

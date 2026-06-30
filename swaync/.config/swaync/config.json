@@ -64,7 +64,7 @@
                 },
                 {
                     "label": "",
-                    "command": "kitty btop"
+                    "command": "alacritty btop"
                 }
             ]
         }
