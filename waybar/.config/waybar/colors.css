@@ -1,21 +1,21 @@
 /* Акцентные цвета */
-@define-color primary #80d5cf;
-@define-color on_primary #003735;
-@define-color primary_container #00504d;
-@define-color on_primary_container #9cf1ec;
+@define-color primary #cacb77;
+@define-color on_primary #313300;
+@define-color primary_container #484a00;
+@define-color on_primary_container #e6e890;
 
 /* Вспомогательные цвета */
-@define-color secondary #b0ccc9;
-@define-color on_secondary #1b3533;
-@define-color tertiary #b0c9e7;
-@define-color on_tertiary #19324a;
+@define-color secondary #c9c8a5;
+@define-color on_secondary #313219;
+@define-color tertiary #a4d0be;
+@define-color on_tertiary #0a372b;
 
 /* Поверхности и фоны */
-@define-color surface #0e1514;
-@define-color on_surface #dde4e2;
-@define-color surface_variant #3f4948;
-@define-color on_surface_variant #bec9c7;
+@define-color surface #14140c;
+@define-color on_surface #e6e3d6;
+@define-color surface_variant #48473a;
+@define-color on_surface_variant #c9c7b6;
 
 /* Дополнительно */
-@define-color outline #889391;
+@define-color outline #939182;
 @define-color error #ffb4ab;

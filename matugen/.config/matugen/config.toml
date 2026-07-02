@@ -16,3 +16,7 @@ output_path = '~/dots/kitty/.config/kitty/kitty-theme.conf'
 [templates.swaync]
 input_path = '~/.config/matugen/templates/swaync.css'
 output_path = '~/.config/swaync/style.css'
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacitty-colors.totm'
+output_path = '~/.config/alacritty/alacritty-colors.toml'

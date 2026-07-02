@@ -1,0 +1,33 @@
+# Основные цвета
+[colors.primary]
+background = "#14140c"
+foreground = "#e6e3d6"
+
+[colors.cursor]
+cursor = "#cacb77"
+
+[colors.selection]
+background = "#48482d"
+foreground = "#e6e4c0"
+
+# Цвета 0-7 (Normal)
+[colors.normal]
+black   = "#14140c"
+red     = "#ffb4ab"
+green   = "#cacb77"
+yellow  = "#c9c8a5"
+blue    = "#a4d0be"
+magenta = "#484a00"
+cyan    = "#48482d"
+white   = "#c9c7b6"
+
+# Цвета 8-15 (Bright)
+[colors.bright]
+black   = "#939182"
+red     = "#93000a"
+green   = "#cacb77"
+yellow  = "#c9c8a5"
+blue    = "#a4d0be"
+magenta = "#606219"
+cyan    = "#244e40"
+white   = "#e6e3d6"

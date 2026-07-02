@@ -82,7 +82,7 @@ accel_profile = "flat"      # "flat" or "adaptive"
 natural_scroll = false      # reverse scroll direction
 
 [cursor]
-theme = "elementary"             # XCURSOR_THEME; "none" = inherit from environment (e.g. "Adwaita")
+theme = "adwaita"             # XCURSOR_THEME; "none" = inherit from environment (e.g. "Adwaita")
 size = 20                    # XCURSOR_SIZE; 0 = inherit from environment (e.g. 24)
 inactive_opacity = 0.5      # cursor opacity on non-active outputs (0.0–1.0)
 
@@ -324,14 +324,13 @@ type = "none"  # render no built-in background (path ignored), so a
 
 # CUSTOM Binds
 "mod+space" = "exec alacritty"
+"mod+t" = "exec alacritty"
 "mod+w" = "exec firefox"
 "mod+e" = "exec nautilus"
-"mod+grave" = "exec rofi -show drun -theme ~/.config/rofi/rofi.rasi"
+"mod+super" = "exec rofi -show drun -theme ~/.config/rofi/rofi.rasi"
 "mod+v" = "exec cliphist list | rofi -dmenu -theme ~/.config/rofi/clip.rasi -p '📋' | cliphist decode | wl-copy"
 "mod+escape" = "exec ~/.config/rofi/powermenu.sh"
-"mod+shift+y" = "exec ~/.config/rofi/wallpaper-picker.sh"
 "mod+n" = "exec swaync-client -t"
-"mod+shift+n" = "exec obsidian --disable-gpu"
 "mod+c" = "exec alacritty -e cmus"
 "ctrl+alt+delete" = "exec alacritty -e btop"
 "mod+x" = "exec flclash"

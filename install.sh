@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIGS=("driftwm" "fastfetch" "fish" "kitty" "matugen" "rofi" "swaync" "waybar")
+CONFIGS=("driftwm" "fastfetch" "fish" "alacritty" "matugen" "rofi" "swaync" "waybar")
 DOTFILES_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 echo "Installing dots"
